@@ -10,10 +10,12 @@ module "sqs_inventory" {
   source  = "../modules/sqs"
   commons = local.commons
   name    = "inventory"
+  sns     = module.sns
 }
 
 module "sqs_analytics" {
   source  = "../modules/sqs"
   commons = local.commons
   name    = "analytics"
+  sns     = module.sns
 }
